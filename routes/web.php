@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\MpesaSTKPUSHController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -19,7 +20,8 @@ Route::post('change_availability', function(Request $request) {
     $user -> available = !$user -> available;
     $user -> push();
     return redirect() -> back();
-    // return response() -> json($request->user());
 })->middleware(['auth'])->name('change_availability');
+
+Route::post('initialize_payment', [MpesaSTKPUSHController::class, 'initializeSTKPush'])->name('initialize_payment');
 
 require __DIR__.'/settings.php';

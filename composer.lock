@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab92572a51caf0000d5bd458b24506cb",
+    "content-hash": "8e121cfec4f9e137f13f96f56fef7523",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1156,72 +1156,6 @@
                 }
             ],
             "time": "2025-08-22T14:27:06+00:00"
-        },
-        {
-            "name": "iankumu/mpesa",
-            "version": "2.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Iankumu/mpesa.git",
-                "reference": "c2c14210bab0ec17bb9931fa9daff074386dfe47"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Iankumu/mpesa/zipball/c2c14210bab0ec17bb9931fa9daff074386dfe47",
-                "reference": "c2c14210bab0ec17bb9931fa9daff074386dfe47",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^7.5",
-                "illuminate/http": "^10.0 | ^11.0 | ^12.0",
-                "illuminate/support": "^10.0 | ^11.0 | ^12.0",
-                "php": "^8.2 | ^8.3 | ^8.4"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^8.0 |^9.0 | ^10.0",
-                "pestphp/pest": "^2.3| ^3.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "aliases": {
-                        "Mpesa": "Iankumu\\Mpesa\\Facades\\Mpesa"
-                    },
-                    "providers": [
-                        "Iankumu\\Mpesa\\MpesaServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Iankumu\\Mpesa\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ian Kumu",
-                    "email": "ian@iankumu.com",
-                    "homepage": "https://www.iankumu.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A package that helps integrate the Mpesa APIs to your Laravel Project",
-            "homepage": "https://github.com/Iankumu/mpesa",
-            "keywords": [
-                "laravel",
-                "laravel mpesa",
-                "laravel-mpesa",
-                "mpesa"
-            ],
-            "support": {
-                "issues": "https://github.com/Iankumu/mpesa/issues",
-                "source": "https://github.com/Iankumu/mpesa/tree/2.2.1"
-            },
-            "time": "2025-08-15T09:39:36+00:00"
         },
         {
             "name": "inertiajs/inertia-laravel",

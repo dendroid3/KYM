@@ -2,7 +2,6 @@
 import { Button } from '@/components/ui/button';
 import {
     Dialog,
-    DialogClose,
     DialogContent,
     DialogDescription,
     DialogFooter,
@@ -12,12 +11,15 @@ import {
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+const csrfToken = document
+    .querySelector('meta[name="csrf-token"]')
+    .getAttribute('content');
 </script>
 
 <template>
     <Dialog>
-        <form>
-            <DialogTrigger as-child>
+        <form method="POST" action="initialize_payment">
+            <!-- <DialogTrigger as-child>
                 <Button class="w-full bg-blue-500 text-white">
                     Unlock Contact
                 </Button>
@@ -30,7 +32,9 @@ import { Label } from '@/components/ui/label';
                         not guarantee availability, agreement, or employment.
                     </DialogDescription>
                     <DialogDescription>
-                        Enter MPesa number to pay KES X. The prompt will be sent with the hakikisha name: "Some Name"
+                        Enter MPesa number to pay KES X. The prompt will be sent
+                        with the hakikisha name: "Some Name"
+                        {{ csrfToken }}
                     </DialogDescription>
                 </DialogHeader>
                 <div class="grid gap-4">
@@ -43,10 +47,19 @@ import { Label } from '@/components/ui/label';
                         />
                     </div>
                 </div>
-                <DialogFooter>
-                    <Button type="submit" class="bg-green-500 text-white"> Pay </Button>
-                </DialogFooter>
-            </DialogContent>
+                <DialogFooter> -->
+
+            <input type="hidden" name="_token" :value="csrfToken">
+                    <Input
+                            id="phone_number"
+                            name="phone_number"
+                            placeholder="0700000000"
+                        />
+                    <Button type="submit" class="bg-green-500 text-white">
+                        Pay
+                    </Button>
+                <!-- </DialogFooter>
+            </DialogContent> -->
         </form>
     </Dialog>
 </template>
